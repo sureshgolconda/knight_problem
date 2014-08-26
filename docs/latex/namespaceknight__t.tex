@@ -1,0 +1,131 @@
+\hypertarget{namespaceknight__t}{\section{knight\-\_\-t \-Namespace \-Reference}
+\label{namespaceknight__t}\index{knight\-\_\-t@{knight\-\_\-t}}
+}
+\subsection*{\-Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structknight__t_1_1cell__ind__t}{cell\-\_\-ind\-\_\-t}
+\begin{DoxyCompactList}\small\item\em \-To store the index of a cell on the board. \end{DoxyCompactList}\item 
+struct \hyperlink{structknight__t_1_1cell__t}{cell\-\_\-t}
+\begin{DoxyCompactList}\small\item\em \-Used while storing a cell for path exploration. \end{DoxyCompactList}\item 
+class \hyperlink{classknight__t_1_1board__t}{board\-\_\-t}
+\item 
+class \hyperlink{classknight__t_1_1search__path__t}{search\-\_\-path\-\_\-t}
+\end{DoxyCompactItemize}
+\subsection*{\-Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{namespaceknight__t_a8acffa8e59123add8085f0e9988a4240}{typedef std\-::vector$<$ \hyperlink{structknight__t_1_1cell__ind__t}{cell\-\_\-ind\-\_\-t} $>$ {\bfseries path\-\_\-t}}\label{namespaceknight__t_a8acffa8e59123add8085f0e9988a4240}
+
+\end{DoxyCompactItemize}
+\subsection*{\-Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{namespaceknight__t_a3e6565f6ba6e4c4a0d7f99a77e98f512}{set\-\_\-board\-\_\-cost\-\_\-8x8} (\hyperlink{classknight__t_1_1board__t}{board\-\_\-t} \&board\-\_\-)
+\item 
+void \hyperlink{namespaceknight__t_aa6559bcb41c6346eacdc20cdc008fffc}{set\-\_\-board\-\_\-cost\-\_\-16x16} (\hyperlink{classknight__t_1_1board__t}{board\-\_\-t} \&board\-\_\-)
+\item 
+void \hyperlink{namespaceknight__t_a12cca3e9b921cc18308343b9a24dcd38}{set\-\_\-board\-\_\-cost\-\_\-32x32} (\hyperlink{classknight__t_1_1board__t}{board\-\_\-t} \&board\-\_\-)
+\item 
+void \hyperlink{namespaceknight__t_ad485887f76b607376fdd722944d58e83}{display\-\_\-path\-\_\-on\-\_\-board} (path\-\_\-t const \&path\-\_\-, int dim\-\_\-size\-\_\-)
+\item 
+void \hyperlink{namespaceknight__t_a793729b067c32c8bd626cb0bd35a8d52}{scan\-\_\-board\-\_\-diagram} (std\-::string file\-Path\-\_\-, \hyperlink{classknight__t_1_1board__t}{board\-\_\-t} \&brd\-\_\-, int \-D\-I\-M\-\_\-\-S\-I\-Z\-E\-\_\-)
+\item 
+bool \hyperlink{namespaceknight__t_a1806048e3d1c32e842698eeb8ac1c0b6}{scan\-\_\-path\-\_\-string} (std\-::string indata\-\_\-, int \&dim\-\_\-size\-\_\-, path\-\_\-t \&path\-\_\-)
+\item 
+bool \hyperlink{namespaceknight__t_a1bbf1173124462b0f27e1415f5960b74}{scan\-\_\-dim\-\_\-src\-\_\-dest} (std\-::string indata\-\_\-, int \&dim\-\_\-size\-\_\-, \hyperlink{structknight__t_1_1cell__ind__t}{cell\-\_\-ind\-\_\-t} \&src\-\_\-, \hyperlink{structknight__t_1_1cell__ind__t}{cell\-\_\-ind\-\_\-t} \&dest\-\_\-)
+\end{DoxyCompactItemize}
+\subsection*{\-Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{namespaceknight__t_abd3220046fe7d32c33bd06fd40649446}{unsigned const int {\bfseries \-B\-L\-O\-C\-K\-E\-D} = \-I\-N\-T\-\_\-\-M\-A\-X}\label{namespaceknight__t_abd3220046fe7d32c33bd06fd40649446}
+
+\item 
+\hypertarget{namespaceknight__t_a388904b19187fbf7ba889ee7660f8777}{unsigned const int {\bfseries \-W\-A\-T\-E\-R} = (\-I\-N\-T\-\_\-\-M\-A\-X -\/1)}\label{namespaceknight__t_a388904b19187fbf7ba889ee7660f8777}
+
+\item 
+\hypertarget{namespaceknight__t_a154abc4b2a093067d3868854e48d45b5}{unsigned const int {\bfseries \-R\-O\-C\-K} = (\-I\-N\-T\-\_\-\-M\-A\-X -\/ 2)}\label{namespaceknight__t_a154abc4b2a093067d3868854e48d45b5}
+
+\item 
+\hypertarget{namespaceknight__t_af7025e563c61bac968161d3d1b85bb61}{unsigned const int {\bfseries \-B\-A\-R\-R\-I\-E\-R} = (\-I\-N\-T\-\_\-\-M\-A\-X -\/ 3)}\label{namespaceknight__t_af7025e563c61bac968161d3d1b85bb61}
+
+\item 
+\hypertarget{namespaceknight__t_addd396a8bf49cd0576d85d5a32e5a42e}{unsigned const int {\bfseries \-T\-E\-L\-E\-P\-O\-R\-T} = (\-I\-N\-T\-\_\-\-M\-A\-X -\/ 4)}\label{namespaceknight__t_addd396a8bf49cd0576d85d5a32e5a42e}
+
+\item 
+\hypertarget{namespaceknight__t_a5c10121dac16797c931c6a020baa0d48}{unsigned const int {\bfseries \-L\-A\-V\-A} = (\-I\-N\-T\-\_\-\-M\-A\-X -\/ 5)}\label{namespaceknight__t_a5c10121dac16797c931c6a020baa0d48}
+
+\item 
+\hypertarget{namespaceknight__t_a7660a2e3572f1cd4785c7cfd763b4c82}{unsigned const {\bfseries \-K\-N\-I\-G\-H\-T\-\_\-\-C} = (\-I\-N\-T\-\_\-\-M\-A\-X -\/6)}\label{namespaceknight__t_a7660a2e3572f1cd4785c7cfd763b4c82}
+
+\item 
+\hypertarget{namespaceknight__t_a02b1ddf0cf4b297b58f97d5423eba09f}{unsigned const int {\bfseries \-M\-I\-N\-\_\-\-V\-A\-L\-I\-D\-\_\-\-V\-A\-L\-U\-E} = (\-I\-N\-T\-\_\-\-M\-A\-X -\/ 7)}\label{namespaceknight__t_a02b1ddf0cf4b297b58f97d5423eba09f}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-File to contain utility functions. \begin{DoxyAuthor}{\-Author}
+\-Suresh \-Golconda 
+\end{DoxyAuthor}
+
+
+\subsection{\-Function \-Documentation}
+\hypertarget{namespaceknight__t_ad485887f76b607376fdd722944d58e83}{\index{knight\-\_\-t@{knight\-\_\-t}!display\-\_\-path\-\_\-on\-\_\-board@{display\-\_\-path\-\_\-on\-\_\-board}}
+\index{display\-\_\-path\-\_\-on\-\_\-board@{display\-\_\-path\-\_\-on\-\_\-board}!knight_t@{knight\-\_\-t}}
+\subsubsection[{display\-\_\-path\-\_\-on\-\_\-board}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf knight\-\_\-t\-::display\-\_\-path\-\_\-on\-\_\-board} (
+\begin{DoxyParamCaption}
+\item[{path\-\_\-t const \&}]{path\-\_\-, }
+\item[{int}]{dim\-\_\-size\-\_\-}
+\end{DoxyParamCaption}
+)}}\label{namespaceknight__t_ad485887f76b607376fdd722944d58e83}
+\-Display the given path, on the board, by numbering the cells along the path. \hypertarget{namespaceknight__t_a793729b067c32c8bd626cb0bd35a8d52}{\index{knight\-\_\-t@{knight\-\_\-t}!scan\-\_\-board\-\_\-diagram@{scan\-\_\-board\-\_\-diagram}}
+\index{scan\-\_\-board\-\_\-diagram@{scan\-\_\-board\-\_\-diagram}!knight_t@{knight\-\_\-t}}
+\subsubsection[{scan\-\_\-board\-\_\-diagram}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf knight\-\_\-t\-::scan\-\_\-board\-\_\-diagram} (
+\begin{DoxyParamCaption}
+\item[{std\-::string}]{file\-Path\-\_\-, }
+\item[{board\-\_\-t \&}]{brd\-\_\-, }
+\item[{int}]{\-D\-I\-M\-\_\-\-S\-I\-Z\-E\-\_\-}
+\end{DoxyParamCaption}
+)}}\label{namespaceknight__t_a793729b067c32c8bd626cb0bd35a8d52}
+\-Utility function to read the input board\-\_\-diagram file and mark, given board with respective cells of \{water, rock, barrier, teleport, lava\} \hypertarget{namespaceknight__t_a1bbf1173124462b0f27e1415f5960b74}{\index{knight\-\_\-t@{knight\-\_\-t}!scan\-\_\-dim\-\_\-src\-\_\-dest@{scan\-\_\-dim\-\_\-src\-\_\-dest}}
+\index{scan\-\_\-dim\-\_\-src\-\_\-dest@{scan\-\_\-dim\-\_\-src\-\_\-dest}!knight_t@{knight\-\_\-t}}
+\subsubsection[{scan\-\_\-dim\-\_\-src\-\_\-dest}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf knight\-\_\-t\-::scan\-\_\-dim\-\_\-src\-\_\-dest} (
+\begin{DoxyParamCaption}
+\item[{std\-::string}]{indata\-\_\-, }
+\item[{int \&}]{dim\-\_\-size\-\_\-, }
+\item[{cell\-\_\-ind\-\_\-t \&}]{src\-\_\-, }
+\item[{cell\-\_\-ind\-\_\-t \&}]{dest\-\_\-}
+\end{DoxyParamCaption}
+)}}\label{namespaceknight__t_a1bbf1173124462b0f27e1415f5960b74}
+\-Utility function to scan, board's dimension, src, and destination cell information from given string. \hypertarget{namespaceknight__t_a1806048e3d1c32e842698eeb8ac1c0b6}{\index{knight\-\_\-t@{knight\-\_\-t}!scan\-\_\-path\-\_\-string@{scan\-\_\-path\-\_\-string}}
+\index{scan\-\_\-path\-\_\-string@{scan\-\_\-path\-\_\-string}!knight_t@{knight\-\_\-t}}
+\subsubsection[{scan\-\_\-path\-\_\-string}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf knight\-\_\-t\-::scan\-\_\-path\-\_\-string} (
+\begin{DoxyParamCaption}
+\item[{std\-::string}]{indata\-\_\-, }
+\item[{int \&}]{dim\-\_\-size\-\_\-, }
+\item[{path\-\_\-t \&}]{path\-\_\-}
+\end{DoxyParamCaption}
+)}}\label{namespaceknight__t_a1806048e3d1c32e842698eeb8ac1c0b6}
+\-Utility function to scan given string for sequence of points along the path. \hypertarget{namespaceknight__t_aa6559bcb41c6346eacdc20cdc008fffc}{\index{knight\-\_\-t@{knight\-\_\-t}!set\-\_\-board\-\_\-cost\-\_\-16x16@{set\-\_\-board\-\_\-cost\-\_\-16x16}}
+\index{set\-\_\-board\-\_\-cost\-\_\-16x16@{set\-\_\-board\-\_\-cost\-\_\-16x16}!knight_t@{knight\-\_\-t}}
+\subsubsection[{set\-\_\-board\-\_\-cost\-\_\-16x16}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf knight\-\_\-t\-::set\-\_\-board\-\_\-cost\-\_\-16x16} (
+\begin{DoxyParamCaption}
+\item[{{\bf board\-\_\-t} \&}]{board\-\_\-}
+\end{DoxyParamCaption}
+)}}\label{namespaceknight__t_aa6559bcb41c6346eacdc20cdc008fffc}
+\-Utility function for testing sample board configuration in a 16x16 board \hypertarget{namespaceknight__t_a12cca3e9b921cc18308343b9a24dcd38}{\index{knight\-\_\-t@{knight\-\_\-t}!set\-\_\-board\-\_\-cost\-\_\-32x32@{set\-\_\-board\-\_\-cost\-\_\-32x32}}
+\index{set\-\_\-board\-\_\-cost\-\_\-32x32@{set\-\_\-board\-\_\-cost\-\_\-32x32}!knight_t@{knight\-\_\-t}}
+\subsubsection[{set\-\_\-board\-\_\-cost\-\_\-32x32}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf knight\-\_\-t\-::set\-\_\-board\-\_\-cost\-\_\-32x32} (
+\begin{DoxyParamCaption}
+\item[{{\bf board\-\_\-t} \&}]{board\-\_\-}
+\end{DoxyParamCaption}
+)}}\label{namespaceknight__t_a12cca3e9b921cc18308343b9a24dcd38}
+\-Utility function for testing sample board configuration in a 32x32 board \hypertarget{namespaceknight__t_a3e6565f6ba6e4c4a0d7f99a77e98f512}{\index{knight\-\_\-t@{knight\-\_\-t}!set\-\_\-board\-\_\-cost\-\_\-8x8@{set\-\_\-board\-\_\-cost\-\_\-8x8}}
+\index{set\-\_\-board\-\_\-cost\-\_\-8x8@{set\-\_\-board\-\_\-cost\-\_\-8x8}!knight_t@{knight\-\_\-t}}
+\subsubsection[{set\-\_\-board\-\_\-cost\-\_\-8x8}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf knight\-\_\-t\-::set\-\_\-board\-\_\-cost\-\_\-8x8} (
+\begin{DoxyParamCaption}
+\item[{{\bf board\-\_\-t} \&}]{board\-\_\-}
+\end{DoxyParamCaption}
+)}}\label{namespaceknight__t_a3e6565f6ba6e4c4a0d7f99a77e98f512}
+\-Utility function for testing sample board configuration in a 8x8 board 

@@ -1,0 +1,124 @@
+\hypertarget{classknight__t_1_1search__path__t}{\section{knight\-\_\-t\-:\-:search\-\_\-path\-\_\-t \-Class \-Reference}
+\label{classknight__t_1_1search__path__t}\index{knight\-\_\-t\-::search\-\_\-path\-\_\-t@{knight\-\_\-t\-::search\-\_\-path\-\_\-t}}
+}
+
+
+{\ttfamily \#include $<$search\-\_\-path.\-H$>$}
+
+\subsection*{\-Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct {\bfseries intermediate\-\_\-steps\-\_\-t}
+\begin{DoxyCompactList}\small\item\em inter mediate steps between knight's single move \end{DoxyCompactList}\item 
+class {\bfseries node\-\_\-t}
+\end{DoxyCompactItemize}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classknight__t_1_1search__path__t_a56a14b89bbb9a6c3cfe8828789019fd3}{search\-\_\-path\-\_\-t} (unsigned dim\-\_\-size\-\_\-, \hyperlink{classknight__t_1_1board__t}{board\-\_\-t} $\ast$base\-\_\-board\-\_\-, bool debug\-\_\-=false)
+\item 
+int \hyperlink{classknight__t_1_1search__path__t_a7456c6c3d1a28e340e7b575f7575df7f}{new\-\_\-cost} (const node\-\_\-t \&nd, int nxi, int nyi)
+\item 
+bool \hyperlink{classknight__t_1_1search__path__t_afe31cd48e27641661603db2f706a7e2b}{move\-\_\-blocked} (const node\-\_\-t \&nd, intermediate\-\_\-steps\-\_\-t const $\ast$path)
+\item 
+bool \hyperlink{classknight__t_1_1search__path__t_afac040432438dccdeaf6ced5672b5d3b}{get\-\_\-path} (int sxi\-\_\-, int syi\-\_\-, int exi\-\_\-, int eyi\-\_\-, path\-\_\-t \&path\-\_\-)
+\item 
+void \hyperlink{classknight__t_1_1search__path__t_a7816702b3940673703c17f9cd7785786}{trace\-\_\-path} (node\-\_\-t const \&dest, node\-\_\-t const \&src, \hyperlink{classknight__t_1_1board__t}{board\-\_\-t} \&search\-\_\-bd, path\-\_\-t \&path\-\_\-)
+\item 
+void \hyperlink{classknight__t_1_1search__path__t_a7682109127e23f472c01fdf50bdded1b}{set\-\_\-teleport\-\_\-nav} (node\-\_\-t const \&nd, \hyperlink{classknight__t_1_1board__t}{board\-\_\-t} \&search\-\_\-bd, std\-::priority\-\_\-queue$<$ node\-\_\-t $>$ \&pq)
+\item 
+intermediate\-\_\-steps\-\_\-t const $\ast$ \hyperlink{classknight__t_1_1search__path__t_a412dd6f1b26de6313bd4b56470972bc9}{move\-\_\-intersteps} (int delx, int dely)
+\item 
+void \hyperlink{classknight__t_1_1search__path__t_aa998648c3a7765b79ad6bc26f37459dd}{display\-\_\-step\-\_\-path} (intermediate\-\_\-steps\-\_\-t const $\ast$path\-\_\-)
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-Class to implement exploration of the chess board to find shortest path from given source cell to given destination cell. 
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{classknight__t_1_1search__path__t_a56a14b89bbb9a6c3cfe8828789019fd3}{\index{knight\-\_\-t\-::search\-\_\-path\-\_\-t@{knight\-\_\-t\-::search\-\_\-path\-\_\-t}!search\-\_\-path\-\_\-t@{search\-\_\-path\-\_\-t}}
+\index{search\-\_\-path\-\_\-t@{search\-\_\-path\-\_\-t}!knight_t::search_path_t@{knight\-\_\-t\-::search\-\_\-path\-\_\-t}}
+\subsubsection[{search\-\_\-path\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}{\bf knight\-\_\-t\-::search\-\_\-path\-\_\-t\-::search\-\_\-path\-\_\-t} (
+\begin{DoxyParamCaption}
+\item[{unsigned}]{dim\-\_\-size\-\_\-, }
+\item[{{\bf board\-\_\-t} $\ast$}]{base\-\_\-board\-\_\-, }
+\item[{bool}]{debug\-\_\- = {\ttfamily false}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{classknight__t_1_1search__path__t_a56a14b89bbb9a6c3cfe8828789019fd3}
+
+\begin{DoxyParams}{\-Parameters}
+{\em debug\-\_\-} & if set will print additional debug information. debug\-\_\- parameter is option, is by default taken as false. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classknight__t_1_1search__path__t_aa998648c3a7765b79ad6bc26f37459dd}{\index{knight\-\_\-t\-::search\-\_\-path\-\_\-t@{knight\-\_\-t\-::search\-\_\-path\-\_\-t}!display\-\_\-step\-\_\-path@{display\-\_\-step\-\_\-path}}
+\index{display\-\_\-step\-\_\-path@{display\-\_\-step\-\_\-path}!knight_t::search_path_t@{knight\-\_\-t\-::search\-\_\-path\-\_\-t}}
+\subsubsection[{display\-\_\-step\-\_\-path}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf knight\-\_\-t\-::search\-\_\-path\-\_\-t\-::display\-\_\-step\-\_\-path} (
+\begin{DoxyParamCaption}
+\item[{intermediate\-\_\-steps\-\_\-t const $\ast$}]{path\-\_\-}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{classknight__t_1_1search__path__t_aa998648c3a7765b79ad6bc26f37459dd}
+\-Prints the intermediate cells of a knight's single step \hypertarget{classknight__t_1_1search__path__t_afac040432438dccdeaf6ced5672b5d3b}{\index{knight\-\_\-t\-::search\-\_\-path\-\_\-t@{knight\-\_\-t\-::search\-\_\-path\-\_\-t}!get\-\_\-path@{get\-\_\-path}}
+\index{get\-\_\-path@{get\-\_\-path}!knight_t::search_path_t@{knight\-\_\-t\-::search\-\_\-path\-\_\-t}}
+\subsubsection[{get\-\_\-path}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf search\-\_\-path\-\_\-t\-::get\-\_\-path} (
+\begin{DoxyParamCaption}
+\item[{int}]{sxi\-\_\-, }
+\item[{int}]{syi\-\_\-, }
+\item[{int}]{exi\-\_\-, }
+\item[{int}]{eyi\-\_\-, }
+\item[{path\-\_\-t \&}]{path\-\_\-}
+\end{DoxyParamCaption}
+)}}\label{classknight__t_1_1search__path__t_afac040432438dccdeaf6ced5672b5d3b}
+\-Implements the \-Best-\/\-First-\/\-Search for finding a path from (sx\-\_\-i,syi\-\_\-) to (exi\-\_\-, eyi\-\_\-). \-Reference\-: \href{http://en.wikipedia.org/wiki/Best-first_search}{\tt http\-://en.\-wikipedia.\-org/wiki/\-Best-\/first\-\_\-search} \hypertarget{classknight__t_1_1search__path__t_afe31cd48e27641661603db2f706a7e2b}{\index{knight\-\_\-t\-::search\-\_\-path\-\_\-t@{knight\-\_\-t\-::search\-\_\-path\-\_\-t}!move\-\_\-blocked@{move\-\_\-blocked}}
+\index{move\-\_\-blocked@{move\-\_\-blocked}!knight_t::search_path_t@{knight\-\_\-t\-::search\-\_\-path\-\_\-t}}
+\subsubsection[{move\-\_\-blocked}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf search\-\_\-path\-\_\-t\-::move\-\_\-blocked} (
+\begin{DoxyParamCaption}
+\item[{const node\-\_\-t \&}]{nd, }
+\item[{intermediate\-\_\-steps\-\_\-t const $\ast$}]{path}
+\end{DoxyParamCaption}
+)}}\label{classknight__t_1_1search__path__t_afe31cd48e27641661603db2f706a7e2b}
+\-Return true if the path blocked by barrier. \-Else returns false. \hypertarget{classknight__t_1_1search__path__t_a412dd6f1b26de6313bd4b56470972bc9}{\index{knight\-\_\-t\-::search\-\_\-path\-\_\-t@{knight\-\_\-t\-::search\-\_\-path\-\_\-t}!move\-\_\-intersteps@{move\-\_\-intersteps}}
+\index{move\-\_\-intersteps@{move\-\_\-intersteps}!knight_t::search_path_t@{knight\-\_\-t\-::search\-\_\-path\-\_\-t}}
+\subsubsection[{move\-\_\-intersteps}]{\setlength{\rightskip}{0pt plus 5cm}search\-\_\-path\-\_\-t\-::intermediate\-\_\-steps\-\_\-t const $\ast$ {\bf search\-\_\-path\-\_\-t\-::move\-\_\-intersteps} (
+\begin{DoxyParamCaption}
+\item[{int}]{delx, }
+\item[{int}]{dely}
+\end{DoxyParamCaption}
+)}}\label{classknight__t_1_1search__path__t_a412dd6f1b26de6313bd4b56470972bc9}
+\-Return the 2 intermediate (adjacent) steps in one step of knigh \hypertarget{classknight__t_1_1search__path__t_a7456c6c3d1a28e340e7b575f7575df7f}{\index{knight\-\_\-t\-::search\-\_\-path\-\_\-t@{knight\-\_\-t\-::search\-\_\-path\-\_\-t}!new\-\_\-cost@{new\-\_\-cost}}
+\index{new\-\_\-cost@{new\-\_\-cost}!knight_t::search_path_t@{knight\-\_\-t\-::search\-\_\-path\-\_\-t}}
+\subsubsection[{new\-\_\-cost}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf search\-\_\-path\-\_\-t\-::new\-\_\-cost} (
+\begin{DoxyParamCaption}
+\item[{const node\-\_\-t \&}]{nd, }
+\item[{int}]{nxi, }
+\item[{int}]{nyi}
+\end{DoxyParamCaption}
+)}}\label{classknight__t_1_1search__path__t_a7456c6c3d1a28e340e7b575f7575df7f}
+\-Returns the cost for neighbor cell when traversing from nd. \hypertarget{classknight__t_1_1search__path__t_a7682109127e23f472c01fdf50bdded1b}{\index{knight\-\_\-t\-::search\-\_\-path\-\_\-t@{knight\-\_\-t\-::search\-\_\-path\-\_\-t}!set\-\_\-teleport\-\_\-nav@{set\-\_\-teleport\-\_\-nav}}
+\index{set\-\_\-teleport\-\_\-nav@{set\-\_\-teleport\-\_\-nav}!knight_t::search_path_t@{knight\-\_\-t\-::search\-\_\-path\-\_\-t}}
+\subsubsection[{set\-\_\-teleport\-\_\-nav}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf search\-\_\-path\-\_\-t\-::set\-\_\-teleport\-\_\-nav} (
+\begin{DoxyParamCaption}
+\item[{node\-\_\-t const \&}]{nd, }
+\item[{{\bf board\-\_\-t} \&}]{search\-\_\-bd, }
+\item[{std\-::priority\-\_\-queue$<$ node\-\_\-t $>$ \&}]{pq}
+\end{DoxyParamCaption}
+)}}\label{classknight__t_1_1search__path__t_a7682109127e23f472c01fdf50bdded1b}
+\-Marks the other end of teleport cell with equal cost and adds to exploration list. \hypertarget{classknight__t_1_1search__path__t_a7816702b3940673703c17f9cd7785786}{\index{knight\-\_\-t\-::search\-\_\-path\-\_\-t@{knight\-\_\-t\-::search\-\_\-path\-\_\-t}!trace\-\_\-path@{trace\-\_\-path}}
+\index{trace\-\_\-path@{trace\-\_\-path}!knight_t::search_path_t@{knight\-\_\-t\-::search\-\_\-path\-\_\-t}}
+\subsubsection[{trace\-\_\-path}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf search\-\_\-path\-\_\-t\-::trace\-\_\-path} (
+\begin{DoxyParamCaption}
+\item[{node\-\_\-t const \&}]{dest, }
+\item[{node\-\_\-t const \&}]{src, }
+\item[{{\bf board\-\_\-t} \&}]{search\-\_\-bd, }
+\item[{path\-\_\-t \&}]{path\-\_\-}
+\end{DoxyParamCaption}
+)}}\label{classknight__t_1_1search__path__t_a7816702b3940673703c17f9cd7785786}
+\-Traces the path from dest to source, to extract sequence of cells (path) 
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+search\-\_\-path.\-H\item 
+search\-\_\-path.\-C\end{DoxyCompactItemize}
