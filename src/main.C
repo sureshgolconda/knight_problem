@@ -95,7 +95,7 @@ void verify_input_stream_path()
 
   /// --- check if input path is valid
   board_t brd (dim_size);
-  if (brd.check_valid_path(path, true))
+  if (brd.check_valid_path(path, false, true))
     {
       printf("Input path: VALID\n");
     }
@@ -131,7 +131,7 @@ void run_shortest_path(int DIM_SIZE, cell_ind_t const &src,
       printf("Path as numbers on the board\n");
       display_path_on_board(path, DIM_SIZE);
 
-      if (base_board.check_valid_path (path, false))
+      if (base_board.check_valid_path (path, false, false))
 	printf("Path validation: VALID PATH (using procedure from level-1)\n");
       else
 	printf("Path Validation: NOT VALID\n");

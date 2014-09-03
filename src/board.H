@@ -200,8 +200,11 @@ namespace knight_t
     /**
        Returns true if sequence of points in path is valid knight
        moves and falls within the board.
+       Optionally checks if nodes are repeated (2nd argument).
     */
-    bool check_valid_path(path_t const &path_, bool display_);
+    bool check_valid_path(path_t const &path_, 
+			  bool repetation_allowed,
+			  bool display_);
 
     ~board_t()
     {

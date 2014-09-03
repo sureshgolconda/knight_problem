@@ -104,7 +104,9 @@ void board_t::reset(int value_)
 }
 
 
-bool board_t::check_valid_path(path_t const &path_, bool display_)
+bool board_t::check_valid_path(path_t const &path_, 
+			       bool repetation_allowed,
+			       bool display_)
 {
   if (path_.empty())
     return true; // return true if list is empty
@@ -117,11 +119,40 @@ bool board_t::check_valid_path(path_t const &path_, bool display_)
 	  (path_[i].yi >= DIM_SIZE))
 	{
 	  if (display_)
-	    printf("Out of board path (%d, %d)\n", 
+	    printf("BAD PATH: Out of board path (%d, %d)\n", 
 		   path_[i].xi, path_[i].yi);
 	  return false;
 	}
     }
+
+
+
+  // If repetation is not allowed, check for that
+  if (!repetation_allowed)
+    {
+      bool visited[DIM_SIZE][DIM_SIZE];
+      // initialize everything to no visited
+      for (int x=0; x< DIM_SIZE; x++)
+	for (int y=0; y<DIM_SIZE; y++)
+	  {
+	    visited[x][y] = false;
+	  }
+
+      // check along the path
+      for (int i=0; i< path_.size(); i++)
+	{
+	  if (visited[path_[i].xi][path_[i].yi])
+	    {
+	      if (display_)
+		printf("BAD PATH: Repeated nodes (%d %d)\n",
+		       path_[i].xi, path_[i].yi);
+	    return false; // Repeated node
+	    }
+	  else // else mark now as visited
+	    visited[path_[i].xi][path_[i].yi] = true;
+	}
+    }
+
 
   // initial move
   if (display_)
@@ -143,7 +174,7 @@ bool board_t::check_valid_path(path_t const &path_, bool display_)
 	  (!teleport_points(path_[i-1], path_[i])))
 	{
 	  if (display_)
-	    printf("Bad move %d from (%d, %d) to (%d, %d)\n", i,
+	    printf("BAD PATH: Bad move %d from (%d, %d) to (%d, %d)\n", i,
 		   path_[i-1].xi, path_[i-1].yi,
 		   path_[i].xi, path_[i].yi);
 
@@ -156,3 +187,4 @@ bool board_t::check_valid_path(path_t const &path_, bool display_)
 
   return true;
 }
+
