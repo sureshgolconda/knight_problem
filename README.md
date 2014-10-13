@@ -5,11 +5,11 @@ Readme File:
 
 Overview:
 ---------
-Present system tries to implement first 4 problems of:
-1) Checking if given path is a valid knight path.
-2) Find a path from given source to given destination cell (8x8)
-3) Shortest path from source to destination (8x8)
-4) Shortest path on a 32x32 board with more rules for {water, rock, etc}.
+Present system tries to implement 4 problems
+1) Checking if a given path is a valid knight path
+2) Find a path from given source to given destination cell on a (8x8) chess board
+3) Shortest path from given source to given destination (8x8) chess board
+4) Shortest path on a 32x32 cheess board with more rules for {water, rock, etc}.
 
 Notes:
 ------
